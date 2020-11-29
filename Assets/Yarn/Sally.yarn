@@ -1,0 +1,37 @@
+title: Sally.start
+tags: 
+colorID: 0
+position: 342,-655
+---
+<<if visited("Sally.start") is false >> 
+    Oh Hi, I'm sorry I wasn't really paying attention.
+    I think I may have seen her walk towards the cafe, so maybe thats worth a check?
+    Otherwise, it may just be easier to find the information desk and ask them to help.
+    [[ Thankyou, Which way is the cafe?|Sally.cafedirection]]
+    [[ No problem, I will find the information point. |Sally.infopoint]]
+<<else>>
+    << if visited("Receptionist.lostchild") is true >> 
+        I overheard you talking to the information point staff, I hope they were able to help.
+    <<else>>
+        Sorry, that is all I know. I really wish I could help you more.
+    <<endif>>
+
+<<endif>>
+===
+title: Sally.cafedirection
+tags: 
+colorID: 0
+position: 633,-866
+---
+Sure, the cafe is over that way
+//Point to cafe animation
+===
+title: Sally.infopoint
+tags: 
+colorID: 0
+position: 636,-641
+---
+That's the best place for issues like this!
+The information point is marked with a large white and blue logo like this one:
+//Insert image
+===

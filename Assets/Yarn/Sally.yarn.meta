@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: e02c5672ed6b5b24d9af109b45a5079d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-GB
+  stringIDs:
+  - Sally-Sally.start-0
+  - Sally-Sally.start-1
+  - Sally-Sally.start-2
+  - Sally-Sally.start-3
+  - Sally-Sally.start-4
+  - Sally-Sally.start-5
+  - Sally-Sally.start-6
+  - Sally-Sally.cafedirection-7
+  - Sally-Sally.infopoint-8
+  - Sally-Sally.infopoint-9
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: e02c5672ed6b5b24d9af109b45a5079d,
+    type: 3}
+  localizations: []

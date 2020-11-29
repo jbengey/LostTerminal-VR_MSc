@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b85d2570aad52e34f98e531b355484b0
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-GB
+  stringIDs: []
+  compilationStatus: 0
+  isSuccesfullyCompiled: 0
+  compilationErrorMessage: "Error on line 13 at position 10:\nmismatched input 'if
+    ' expecting COMMAND_END\r\n<<  else if visited(\"Receptionist.lostchild\") is
+    true >> \r\n         ^^^"
+  baseLanguage: {instanceID: 0}
+  localizations: []

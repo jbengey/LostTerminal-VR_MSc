@@ -1,0 +1,47 @@
+title: CheckInCarly.start
+tags: 
+colorID: 0
+position: 474,-2088
+---
+<<if visited("CheckInCarly.start") is false>>
+    A warm welcome from SimplyFlight!
+<<else>>
+    Hello again,
+<< endif>> 
+
+<<if visited("Receptionist.lostchild") is true>>
+    Did you hear about that lost child?...
+    You have to really feel sorry for the parents, anything can happen in an airport!
+<< endif>> 
+
+
+<< if visited("CheckInCarly.checkedin") is true >> 
+    Thats all sir, just make your way to security and enjoy your flight
+<<else>>
+    If you could pass over your documents, I will get your boarding pass sorted.
+<<endif>>
+
+
+//Option control logic
+<< if visited("CheckInCarly.checkedin") is false >> 
+    [[ Hand over passport and other documents |CheckInCarly.checkedin]]
+    [[ Thankyou, but there's something I need to do first |CheckInCarly.delaycheckin]]
+<<endif>>
+===
+title: CheckInCarly.checkedin
+tags: 
+colorID: 0
+position: 768,-1943
+---
+That's perfect!
+Here is your boarding pass, now please make your way over to the security area.
+Have a great trip!
+===
+title: CheckInCarly.delaycheckin
+tags: 
+colorID: 0
+position: 762,-2218
+---
+No problem Sir!
+Come and see me when you are ready.
+===

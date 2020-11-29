@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 1a474173614c5e14b9e63e126f5d54e1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - CheckInCarly-CheckInCarly.start-0
+  - CheckInCarly-CheckInCarly.start-1
+  - CheckInCarly-CheckInCarly.start-2
+  - CheckInCarly-CheckInCarly.start-3
+  - CheckInCarly-CheckInCarly.start-4
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
