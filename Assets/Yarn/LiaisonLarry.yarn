@@ -1,0 +1,93 @@
+title: LiaisonLarry.start
+tags: 
+colorID: 0
+position: 326,-1951
+---
+<< if visited("LiaisonLarry.start") is false>>
+    Hello there! I'm Larry, how can I help you Sir?
+<<elseif $LiaisonRepeat is 1>>
+    Now, is there anyhing else you need from me?
+<< else>>
+    Ah you're back, can I help?
+<< endif>> 
+
+
+<< if visited("Receptionist.lostchild") is true and visited("LiaisonLarry.childdesc") is false>>
+    [[ I've lost my child, Are they with you? |LiaisonLarry.childdesc]]
+<< elseif visited("LiaisonLarry.wrongdesc") is true>> 
+    [[ Here is my boarding pass and documents. |LiaisonLarry.docs]]
+<<endif>>
+
+
+[[There's nothing I need help with, Thanks.|LiaisonLarry.end]]
+===
+title: LiaisonLarry.childdesc
+tags: 
+colorID: 0
+position: 612,-1950
+---
+Ahh.. my colleague has made me aware of a missing child..
+For safety reasons sir, I am gonna have to ask you to describe the child and what they are wearing...
+
+[[They are 8 years old, with a blue jumper|LiaisonLarry.wrongdesc]]
+[[They are 6 years old, with a yellow t-shirt|LiaisonLarry.correctdesc]]
+===
+title: LiaisonLarry.end
+tags: 
+colorID: 0
+position: -21,-1955
+---
+Have a fantastic day!
+<<set $LiaisonRepeat to 0>>
+<<set $LiaisonRepeatAns to 0>>
+<< set $RetVal to 0 >>
+===
+title: LiaisonLarry.wrongdesc
+tags: 
+colorID: 0
+position: 610,-2283
+---
+That doesn't seem to match the description I was looking for...
+But these things do happen, I am a parent myself so I understand,
+Why don't you bring me your boarding pass and documents and that will evidence things...
+
+ [[My memory must have slipped, sure I will get those now.|LiaisonLarry.end]]
+===
+title: LiaisonLarry.correctdesc
+tags: 
+colorID: 0
+position: 619,-1615
+---
+That's correct!
+[[LiaisonLarry.endchild]]
+===
+title: LiaisonLarry.docs
+tags: 
+colorID: 0
+position: 327,-1616
+---
+Let me just take a look at these...
+<<wait 2>> 
+<<hasBoardingPass LiaisonLarry>>
+
+<< if $RetVal is true>> 
+//if have board pass
+    That looks good to me!
+    [[LiaisonLarry.endchild]]
+<<else>>
+//if do not have boarding pass
+    You don't seem to have your pass sir! , please bring it to me in your hand.
+    [[LiaisonLarry.end]]
+<< endif>>
+===
+title: LiaisonLarry.endchild
+tags: 
+colorID: 0
+position: 472,-1338
+---
+Have no fear, your child has been here the whole time just taking a look at the books!
+I hope you both enjoy your flight!
+
+//ENDING 1: Find Child
+//Cut to end scene with dancing
+===

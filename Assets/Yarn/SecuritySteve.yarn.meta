@@ -8,17 +8,11 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
+  baseLanguageID: en-GB
   stringIDs: []
   compilationStatus: 0
   isSuccesfullyCompiled: 0
-  compilationErrorMessage: 'Error on line 23 at position 1:
-
-    mismatched input
-    ''==='' expecting COMMAND_START
-
-    ===
-
-    ^^^'
+  compilationErrorMessage: "Error on line 50 at position 22:\nmissing '(' at 'SecuritySteve'\r\n<<if
+    HasBoardingPass SecuritySteve is true>>\r\n                     ^^^^^^^^^^^^^"
   baseLanguage: {instanceID: 0}
   localizations: []

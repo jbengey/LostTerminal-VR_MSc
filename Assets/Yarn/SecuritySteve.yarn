@@ -1,53 +1,93 @@
 title: SecuritySteve.start
 tags: 
 colorID: 0
-position: 695,-2015
+position: 624,-2053
 ---
 <<if visited("SecuritySteve.start") is false>>
     Alright treacle, What can I do for you?
+<< elseif $securityRepeat is 1>>
+    Is there anything else I can do for you?
 << else >>
-    Hello again, how can I help?
+    Oh Hi, how can I help?
 <<endif>>
+
 
 
 <<if visited("Receptionist.lostchild") is true>>
-    [[ I have lost my child, I was directed to you for help|SecuritySteve.liason]]
-<<endif>>
-<< if visited("CafeWorkerDave") is true>> 
-    [[A suspicous man has taken my child|SecuritySteve.cafe]]
+    [[ I have lost my child, I was directed to you for help|SecuritySteve.liaison]]
+<< elseif $securityRepeatAns is not "flight" >> 
+    [[ I would like to board my flight|SecuritySteve.flight]]
 <<endif>>
 
-<< if visited("CheckInCarly.checkedin") is true>> 
-    [[Action: Hand over boarding pass|SecuritySteve.checkin]]
+<< if visited("CafeWorkerDave.start") is true>> 
+    [[A suspicous man has taken my child from the cafe area|SecuritySteve.cafe]]
+<<endif>>
+
+<< if visited("CheckInCarly.checkedin") is true and $securityRepeatAns is not "checkin">> 
+    [[I'm here to get to my departure gate|SecuritySteve.checkin]]
 << endif>> 
 
-[[ Nothing, Thankyou|SecuritySteve.end]]
+[[ Nothing, Thank you|SecuritySteve.end]]
 ===
-title: SecuritySteve.liason
+title: SecuritySteve.liaison
 tags: 
 colorID: 0
-position: 1035,-2310
+position: 995,-2301
 ---
-Empty Text
+Ahh! You must be the person that the announcement was about!
+No problem at all, it's most likely that your child is with our passenger liaison, Larry..
+He is just over there, I am certain I saw a child with him earlier.
+//point animation
 ===
 title: SecuritySteve.cafe
 tags: 
 colorID: 0
-position: 1047,-2047
+position: 990,-1811
 ---
 Empty Text
 ===
 title: SecuritySteve.checkin
 tags: 
 colorID: 0
-position: 1087,-1808
+position: 988,-1565
 ---
-Empty Text
+<<hasBoardingPass SecuritySteve>>
+<< if $RetVal is true>> 
+//If has boarding pass
+    No problem at all Sir,
+    your boarding pass looks good to me,
+    please ensure you have no prohibited items in your hand luggage and enjoy your flight!
+    << set $RetVal to 0 >> 
+
+<<else>>
+//If no boarding pass
+    Sorry Sir, you need to have your boarding pass to proceed through the gate.
+    <<set $securityRepeat to 1>>
+    <<set $securityRepeatAns to "checkin">>
+    << set $RetVal to 0 >> 
+
+    [[SecuritySteve.start]]
+
+
+<<endif>>
 ===
 title: SecuritySteve.end
 tags: 
 colorID: 0
-position: 1009,-1574
+position: 336,-2051
 ---
-Empty Text
+No problem, take care.
+<<set $securityRepeatAns to 0>>
+<<set $securityRepeat to 0>>
+===
+title: SecuritySteve.flight
+tags: 
+colorID: 0
+position: 997,-2055
+---
+To get past security and catch your flight, you'll need your boarding pass!
+Head over to the information point and they will be able to direct you to the right place to sort that!
+<<set $securityRepeat to 1>>
+<<set $securityRepeatAns to "flight">>
+[[SecuritySteve.start]]
 ===

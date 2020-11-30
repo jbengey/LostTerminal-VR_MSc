@@ -1,31 +1,37 @@
 title: Receptionist.start
 tags: 
 colorID: 0
-position: 1202,-1699
+position: 1202,-1696
 ---
 << if visited("Receptionist.start") is false>>
     Good afternoon sir, How can I help you today?
 << else>>
     <<if $receptionistRepeat is 1>>
         Is there anything else I can help you with?
-    << endif>> 
-
-    <<if $receptionistRepeat is not 1>>
+    <<else>>
         Hello again, was there something you forgot to ask?
     << endif>> 
 
 << endif>> 
 
+
 << if visited("Receptionist.lostchild") is false>> 
     [[ I have lost my child, please help me!|Receptionist.lostchild]]
-<< else>>
+<<elseif $receptionistRepeatAns is not "securitydesc">> 
     [[ Where can I find the security guard?|Receptionist.securitydesc]]
+<<endif>>
 
-<< endif>> 
+<<if $receptionistRepeatAns is not "boardingpass">>
+    [[ Where can I get my boarding pass from? |Receptionist.boardingpass]]
+<<endif>>
 
-[[ Where can I get my boarding pass from? |Receptionist.boardingpass]]
-[[ What time is my flight leaving?|Receptionist.flighttime]]
-[[ Nothing, but thankyou for asking|Receptionist.end]]
+<< if $receptionistRepeatAns is not "flighttime">> 
+    [[ What time is my flight leaving?|Receptionist.flighttime]]
+<<endif>> 
+
+[[ Nothing, but thank you for asking|Receptionist.end]]
+
+//Logic doesnt work correctly
 ===
 title: Receptionist.lostchild
 tags: 
@@ -45,11 +51,12 @@ In the meantime why don't you ask the security guard if he has noticed anything?
 title: Receptionist.boardingpass
 tags: 
 colorID: 0
-position: 1528,-1624
+position: 1529,-1624
 ---
 You can collect your boarding pass at one of the check-in desks, These are bright orange and are just over there...
 //points to desks
 <<set $receptionistRepeat to 1>>
+<<set $receptionistRepeatAns to "boardingpass">>
 [[Receptionist.start]]
 ===
 title: Receptionist.flighttime
@@ -59,6 +66,7 @@ position: 1527,-1365
 ---
 Your flight departs in 20 minutes time, so please drop off your bags and make your way to the gate.
 <<set $receptionistRepeat to 1>>
+<<set $receptionistRepeatAns to "flighttime">>
 [[Receptionist.start]]
 ===
 title: Receptionist.end
@@ -68,6 +76,7 @@ position: 938,-1704
 ---
 No problem, have a great flight!
 <<set $receptionistRepeat to 0>>
+<<set $receptionistRepeatAns to 0>>
 ===
 title: Receptionist.securitydesc
 tags: 
@@ -78,5 +87,6 @@ The security guard can be found next to the security area,
 He will be wearing a black outfit, so should be easy to spot!
 
 <<set $receptionistRepeat to 1>>
+<<set $receptionistRepeatAns to "securitydesc">>
 [[Receptionist.start]]
 ===

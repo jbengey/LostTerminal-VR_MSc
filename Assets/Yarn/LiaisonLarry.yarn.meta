@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: a909e138911cfde498941435356d1505
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - LiaisonLarry-LiaisonLarry.start-0
+  - LiaisonLarry-LiaisonLarry.start-1
+  - LiaisonLarry-LiaisonLarry.start-2
+  - LiaisonLarry-LiaisonLarry.start-3
+  - LiaisonLarry-LiaisonLarry.start-4
+  - LiaisonLarry-LiaisonLarry.start-5
+  - LiaisonLarry-LiaisonLarry.childdesc-6
+  - LiaisonLarry-LiaisonLarry.childdesc-7
+  - LiaisonLarry-LiaisonLarry.childdesc-8
+  - LiaisonLarry-LiaisonLarry.childdesc-9
+  - LiaisonLarry-LiaisonLarry.end-10
+  - LiaisonLarry-LiaisonLarry.end-11
+  - LiaisonLarry-LiaisonLarry.wrongdesc-12
+  - LiaisonLarry-LiaisonLarry.wrongdesc-13
+  - LiaisonLarry-LiaisonLarry.wrongdesc-14
+  - LiaisonLarry-LiaisonLarry.wrongdesc-15
+  - LiaisonLarry-LiaisonLarry.correctdesc-16
+  - LiaisonLarry-LiaisonLarry.docs-17
+  - LiaisonLarry-LiaisonLarry.endchild-18
+  - LiaisonLarry-LiaisonLarry.endchild-19
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

@@ -1,7 +1,7 @@
 title: CheckInCarly.start
 tags: 
 colorID: 0
-position: 474,-2088
+position: 474,-2089
 ---
 <<if visited("CheckInCarly.start") is false>>
     A warm welcome from SimplyFlight!
@@ -34,7 +34,8 @@ colorID: 0
 position: 768,-1943
 ---
 That's perfect!
-Here is your boarding pass, now please make your way over to the security area.
+Here is your boarding pass, make sure to keep that somewhere safe!
+please make your way over to the security area to depart.
 Have a great trip!
 ===
 title: CheckInCarly.delaycheckin
