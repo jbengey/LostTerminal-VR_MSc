@@ -5,7 +5,7 @@ position: 342,-655
 ---
 <<if visited("Sally.start") is false >> 
     Oh Hi, I'm sorry I wasn't really paying attention.
-    I think I may have seen her walk towards the cafe, so maybe thats worth a check?
+    I think I may have seen them walk towards the cafe, so maybe thats worth a check?
     Otherwise, it may just be easier to find the information desk and ask them to help.
     [[ Thankyou, Which way is the cafe?|Sally.cafedirection]]
     [[ No problem, I will find the information point. |Sally.infopoint]]

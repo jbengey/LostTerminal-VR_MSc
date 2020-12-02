@@ -19,8 +19,8 @@ position: 624,-2053
     [[ I would like to board my flight|SecuritySteve.flight]]
 <<endif>>
 
-<< if visited("CafeWorkerDave.start") is true>> 
-    [[A suspicous man has taken my child from the cafe area|SecuritySteve.cafe]]
+<< if visited("CafeWorkerDave.missingchild") is true>> 
+    [[A suspicous man has taken my child!|SecuritySteve.cafe]]
 <<endif>>
 
 << if visited("CheckInCarly.checkedin") is true and $securityRepeatAns is not "checkin">> 
@@ -42,9 +42,12 @@ He is just over there, I am certain I saw a child with him earlier.
 title: SecuritySteve.cafe
 tags: 
 colorID: 0
-position: 990,-1811
+position: 998,-1821
 ---
-Empty Text
+oh no no no...not again...
+I am so sorry sir, this has been happening all week...
+I am afraid to say that your child has been abducted...
+//ENDING 3: CHILD WAS ABDUCTED
 ===
 title: SecuritySteve.checkin
 tags: 
@@ -58,6 +61,8 @@ position: 988,-1565
     your boarding pass looks good to me,
     please ensure you have no prohibited items in your hand luggage and enjoy your flight!
     << set $RetVal to 0 >> 
+//ENDING 2: BOARD FLIGHT
+
 
 <<else>>
 //If no boarding pass

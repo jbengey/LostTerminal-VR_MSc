@@ -549,6 +549,7 @@ MonoBehaviour:
   dialogueRunner: {fileID: 2750270513271888834}
   dialogueCanavas: {fileID: 2750270513080939671}
   player: {fileID: 290224435}
+  emptyDialogueHolder: {fileID: 809550842}
 --- !u!23 &294144996
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1007,6 +1008,7 @@ MonoBehaviour:
   dialogueRunner: {fileID: 2750270513271888834}
   dialogueCanavas: {fileID: 2750270513080939671}
   player: {fileID: 290224435}
+  emptyDialogueHolder: {fileID: 809550842}
 --- !u!1 &708662264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,7 +1116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &717514905
 Transform:
   m_ObjectHideFlags: 0
@@ -1130,6 +1132,36 @@ Transform:
   - {fileID: 1045879860}
   m_Father: {fileID: 2045870919}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &809550842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809550843}
+  m_Layer: 0
+  m_Name: EmptyDialogueHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &809550843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809550842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.21, y: 0, z: -36.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &942177006
 GameObject:
@@ -1214,6 +1246,7 @@ MonoBehaviour:
   dialogueRunner: {fileID: 2750270513271888834}
   dialogueCanavas: {fileID: 2750270513080939671}
   player: {fileID: 290224435}
+  emptyDialogueHolder: {fileID: 809550842}
 --- !u!23 &942177011
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1339,10 +1372,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: CafeWorkerDave
   talkToNode: CafeWorkerDave.start
-  scriptToLoad: {fileID: 0}
+  scriptToLoad: {fileID: 2480198943629176163, guid: 6ff911254912a7e44a42b5bbcd4ee823,
+    type: 3}
   dialogueRunner: {fileID: 2750270513271888834}
   dialogueCanavas: {fileID: 2750270513080939671}
   player: {fileID: 290224435}
+  emptyDialogueHolder: {fileID: 809550842}
 --- !u!23 &1045879864
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1567,6 +1602,7 @@ MonoBehaviour:
   dialogueRunner: {fileID: 2750270513271888834}
   dialogueCanavas: {fileID: 2750270513080939671}
   player: {fileID: 290224435}
+  emptyDialogueHolder: {fileID: 809550842}
 --- !u!23 &1269647718
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2075,6 +2111,7 @@ MonoBehaviour:
   dialogueRunner: {fileID: 2750270513271888834}
   dialogueCanavas: {fileID: 2750270513080939671}
   player: {fileID: 290224435}
+  emptyDialogueHolder: {fileID: 809550842}
 --- !u!23 &1927379413
 MeshRenderer:
   m_ObjectHideFlags: 0

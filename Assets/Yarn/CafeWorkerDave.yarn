@@ -1,0 +1,69 @@
+title: CafeWorkerDave.start
+tags: 
+colorID: 0
+position: 92,-906
+---
+<<if visited("CafeWorkerDave.start") is false>>
+    Hello there! Can I interest you in our specialty sandwhich Sir?
+<<elseif visited("CafeWorkerDave.missingchild") is true>> 
+    I hope the security guard was able to help you Sir. How can I be of assistance?
+<<elseif $repeatCafe is 1>>
+    Was there anything else?
+<<else>>
+    Hi, did you forget something?
+<< endif>> 
+
+
+<<if visited("Sally.start") is true and visited("CafeWorkerDave.child") is false>>
+    [[Have you seen a young child recently?|CafeWorkerDave.child]]
+<<endif>>
+
+<<if $repeatAnsCafe is not "sandwhich">> 
+[[ How much is the sandwhich? |CafeWorkerDave.sandwhich]]
+<<endif>>
+
+
+[[ No thank you.|CafeWorkerDave.end]]
+===
+title: CafeWorkerDave.child
+tags: 
+colorID: 0
+position: 384,-1168
+---
+Actually yes I did just see a child wearing a yellow t-shirt...
+They were with a fairly odd looking man, which I can only assume was their father?
+
+<<set $repeatAnsCafe to 1>>
+<<set $repeatCafe to 1>>
+[[ That's my child! - where did they go?|CafeWorkerDave.missingchild]]
+[[ Ahh nevermind, that's not my child.|CafeWorkerDave.start]]
+===
+title: CafeWorkerDave.sandwhich
+tags: 
+colorID: 0
+position: 369,-716
+---
+It's a bargain at just £3.75,
+You get the choice of Ham or chicken and we even do a vegetarian option!
+<<set $repeatAnsCafe to "sandwhich">>
+<<set $repeatCafe to 1>>
+ [[CafeWorkerDave.start]]
+===
+title: CafeWorkerDave.end
+tags: 
+colorID: 0
+position: -170,-891
+---
+Let me know if you change your mind about that sandwhich!
+<<set $repeatAnsCafe to 0>>
+<<set $repeatCafe to 0>>
+===
+title: CafeWorkerDave.missingchild
+tags: 
+colorID: 0
+position: 645,-935
+---
+Oh no... there have been a few of these incidents recently...
+Please try not to worry...
+Head over to the security guard, he will know what to do!
+===

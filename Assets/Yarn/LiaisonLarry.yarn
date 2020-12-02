@@ -76,7 +76,7 @@ Let me just take a look at these...
     [[LiaisonLarry.endchild]]
 <<else>>
 //if do not have boarding pass
-    You don't seem to have your pass sir! , please bring it to me in your hand.
+    You don't seem to have your pass sir! , please bring it to me.
     [[LiaisonLarry.end]]
 << endif>>
 ===

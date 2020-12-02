@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 6ff911254912a7e44a42b5bbcd4ee823
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - CafeWorkerDave-CafeWorkerDave.start-0
+  - CafeWorkerDave-CafeWorkerDave.start-1
+  - CafeWorkerDave-CafeWorkerDave.start-2
+  - CafeWorkerDave-CafeWorkerDave.start-3
+  - CafeWorkerDave-CafeWorkerDave.start-4
+  - CafeWorkerDave-CafeWorkerDave.start-5
+  - CafeWorkerDave-CafeWorkerDave.start-6
+  - CafeWorkerDave-CafeWorkerDave.start-7
+  - CafeWorkerDave-CafeWorkerDave.child-8
+  - CafeWorkerDave-CafeWorkerDave.child-9
+  - CafeWorkerDave-CafeWorkerDave.child-10
+  - CafeWorkerDave-CafeWorkerDave.child-11
+  - CafeWorkerDave-CafeWorkerDave.sandwhich-12
+  - CafeWorkerDave-CafeWorkerDave.sandwhich-13
+  - CafeWorkerDave-CafeWorkerDave.end-14
+  - CafeWorkerDave-CafeWorkerDave.missingchild-15
+  - CafeWorkerDave-CafeWorkerDave.missingchild-16
+  - CafeWorkerDave-CafeWorkerDave.missingchild-17
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
