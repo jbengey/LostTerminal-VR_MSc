@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.UI;
+using UnityEngine.Animations.Rigging;
 
 
 public class DialogController : MonoBehaviour
@@ -11,8 +13,9 @@ public class DialogController : MonoBehaviour
     public YarnProgram scriptToLoad;
     public DialogueRunner dialogueRunner; //refernce to the dialogue control
     public GameObject dialogueCanavas; //refernce to the canvas
-    Vector3 PostionSpeachBubble = new Vector3(0f, 0.0f, -0.4f);
-    public GameObject player,emptyDialogueHolder; //reference to the player and to an empty game object
+    Vector3 PostionSpeachBubble = new Vector3(0f, 0.7f, -0.4f);
+    public GameObject player,emptyDialogueHolder,dialogueName; //reference to the player and to an empty game object
+    public MultiAimConstraint headAimConstraint;
 
 
     /// </summary>
@@ -46,7 +49,16 @@ public class DialogController : MonoBehaviour
                     dialogueCanavas.SetActive(true);
                     dialogueCanavas.transform.SetParent(transform.parent.transform); // use the root to prevent scaling
                     dialogueCanavas.GetComponent<RectTransform>().anchoredPosition3D = transform.parent.TransformVector(PostionSpeachBubble);
+                    dialogueName.GetComponent<Text>().text = characterName;
+
                 }
+
+                //Make NPC look at player - set aim constraint weight to one
+                if (headAimConstraint != null)
+                {
+                StartCoroutine(ChangeWeight(0.0f, 1.0f, 0.6f));
+                }
+
 
                 if (dialogueRunner.IsDialogueRunning)
                 {
@@ -71,22 +83,44 @@ public class DialogController : MonoBehaviour
             {
                 dialogueRunner.Stop();
             }
+
+            //Stop NPC from looking at player - set aim constraint weight to zero
+            if (headAimConstraint != null)
+            {
+               StartCoroutine(ChangeWeight(1.0f, 0.0f, 0.6f));
+            }
+
         }
     }
 
 
 
-    //Update function to rotate canvas to always face the player?, and enable weight on animation to have the character to speak facing the player
+    //Update function to rotate canvas to always face the player
 
     private void Update()
     {
         if (dialogueRunner.IsDialogueRunning & dialogueCanavas.activeInHierarchy)
         {
             //Rotate the canvas towards the player
-            dialogueCanavas.transform.rotation = player.transform.rotation;
+            dialogueCanavas.transform.rotation =  player.transform.rotation;
+
+
         }
     }
 
+
+    //Function to smooth the change in multi-aim weight over time, so head doesnt jar to the player
+    private IEnumerator ChangeWeight(float v_start, float v_end, float duration)
+    {
+        float elapsed = 0.0f;
+        while (elapsed < duration)
+        {
+            headAimConstraint.weight = Mathf.Lerp(v_start, v_end, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        headAimConstraint.weight = v_end;
+    }
 
 
 
