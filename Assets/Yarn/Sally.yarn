@@ -1,7 +1,7 @@
 title: Sally.start
 tags: 
 colorID: 0
-position: 342,-655
+position: 346,-749
 ---
 <<if visited("Sally.start") is false >> 
     Oh Hi, I'm sorry I wasn't really paying attention.
@@ -13,6 +13,7 @@ position: 342,-655
     << if visited("Receptionist.lostchild") is true >> 
         I overheard you talking to the information point staff, I hope they were able to help.
     <<else>>
+        <<playAnimatorState Sally sorry >>
         Sorry, that is all I know. I really wish I could help you more.
     <<endif>>
 
@@ -23,8 +24,9 @@ tags:
 colorID: 0
 position: 633,-866
 ---
-Sure, the cafe is over that way
 //Point to cafe animation
+<<playAnimatorState Sally point >>
+Sure, the cafe is over that way
 ===
 title: Sally.infopoint
 tags: 
