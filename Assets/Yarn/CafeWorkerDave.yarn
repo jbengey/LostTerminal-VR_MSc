@@ -30,6 +30,7 @@ tags:
 colorID: 0
 position: 384,-1168
 ---
+<<playAnimatorState CafeWorkerDave Thinking >>
 Actually yes I did just see a child wearing a yellow t-shirt...
 They were with a fairly odd looking man, which I can only assume was their father?
 
@@ -43,6 +44,7 @@ tags:
 colorID: 0
 position: 369,-716
 ---
+<<playAnimatorState CafeWorkerDave HappyIdle >>
 It's a bargain at just £3.75,
 You get the choice of Ham or chicken and we even do a vegetarian option!
 <<set $repeatAnsCafe to "sandwhich">>
@@ -54,6 +56,7 @@ tags:
 colorID: 0
 position: -170,-891
 ---
+<<playAnimatorState CafeWorkerDave HandGesture >>
 Let me know if you change your mind about that sandwhich!
 <<set $repeatAnsCafe to 0>>
 <<set $repeatCafe to 0>>
@@ -63,6 +66,7 @@ tags:
 colorID: 0
 position: 645,-935
 ---
+<<playAnimatorState CafeWorkerDave Worry >>
 Oh no... there have been a few of these incidents recently...
 Please try not to worry...
 Head over to the security guard, he will know what to do!

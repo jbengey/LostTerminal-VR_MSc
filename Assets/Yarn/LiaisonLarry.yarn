@@ -37,6 +37,7 @@ tags:
 colorID: 0
 position: -21,-1955
 ---
+<<playAnimatorState LiaisonLarry Wave >>
 Have a fantastic day!
 <<set $LiaisonRepeat to 0>>
 <<set $LiaisonRepeatAns to 0>>
@@ -47,17 +48,19 @@ tags:
 colorID: 0
 position: 610,-2283
 ---
+<<playAnimatorState LiaisonLarry ShakeHead >>
 That doesn't seem to match the description I was looking for...
 But these things do happen, I am a parent myself so I understand,
 Why don't you bring me your boarding pass and documents and that will evidence things...
 
- [[My memory must have slipped, sure I will get those now.|LiaisonLarry.end]]
+[[My memory must have slipped, sure I will get those now.|LiaisonLarry.end]]
 ===
 title: LiaisonLarry.correctdesc
 tags: 
 colorID: 0
 position: 619,-1615
 ---
+<<playAnimatorState LiaisonLarry Thumbsup >>
 That's correct!
 [[LiaisonLarry.endchild]]
 ===
@@ -66,16 +69,19 @@ tags:
 colorID: 0
 position: 327,-1616
 ---
+<<playAnimatorState LiaisonLarry AskForPass >>
 Let me just take a look at these...
 <<wait 2>> 
 <<hasBoardingPass LiaisonLarry>>
 
 << if $RetVal is true>> 
 //if have board pass
+    <<playAnimatorState LiaisonLarry Thumbsup >>
     That looks good to me!
     [[LiaisonLarry.endchild]]
 <<else>>
 //if do not have boarding pass
+    <<playAnimatorState LiaisonLarry ShakeHead >>
     You don't seem to have your pass sir! , please bring it to me.
     [[LiaisonLarry.end]]
 << endif>>

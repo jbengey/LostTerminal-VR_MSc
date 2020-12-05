@@ -4,11 +4,13 @@ colorID: 0
 position: 1202,-1696
 ---
 << if visited("Receptionist.start") is false>>
+    <<playAnimatorState Receptionist Wave >>
     Good afternoon sir, How can I help you today?
 << else>>
     <<if $receptionistRepeat is 1>>
         Is there anything else I can help you with?
     <<else>>
+        <<playAnimatorState Receptionist Wave >>
         Hello again, was there something you forgot to ask?
     << endif>> 
 
@@ -38,10 +40,14 @@ tags:
 colorID: 0
 position: 1523,-1890
 ---
+<<playAnimatorState Receptionist Surprised >>
+
 Oh dear... I can understand your concern, but please do not worry.
 I will make a quick announcement to alert members of staff...
-<<wait 4>>
+<<playAnimatorState Receptionist Button >>
 //Play announcement sound
+<<wait 4>>
+
 
 In the meantime why don't you ask the security guard if he has noticed anything?
 
@@ -53,8 +59,10 @@ tags:
 colorID: 0
 position: 1529,-1624
 ---
+<<playAnimatorState Receptionist Point >>
 You can collect your boarding pass at one of the check-in desks, These are bright orange and are just over there...
 //points to desks
+
 <<set $receptionistRepeat to 1>>
 <<set $receptionistRepeatAns to "boardingpass">>
 [[Receptionist.start]]
@@ -74,6 +82,8 @@ tags:
 colorID: 0
 position: 938,-1704
 ---
+<<playAnimatorState Receptionist Thank >>
+
 No problem, have a great flight!
 <<set $receptionistRepeat to 0>>
 <<set $receptionistRepeatAns to 0>>

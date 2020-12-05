@@ -14,7 +14,8 @@ public class YarnAnimator : MonoBehaviour
     {
         if (animatorState != null)
         {
-            animationController.CrossFade(animatorState,0.5f);
+            animationController.CrossFadeInFixedTime(animatorState,0.3f);
+
         }
     }
    

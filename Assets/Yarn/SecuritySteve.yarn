@@ -32,19 +32,20 @@ position: 624,-2053
 title: SecuritySteve.liaison
 tags: 
 colorID: 0
-position: 995,-2301
+position: 995,-2317
 ---
+<<playAnimatorState SecuritySteve Talking >>
 Ahh! You must be the person that the announcement was about!
 No problem at all, it's most likely that your child is with our passenger liaison, Larry..
-He is just over there, I am certain I saw a child with him earlier.
-//point animation
+He is just over there wearing a blue shirt, I am certain I saw a child with him earlier.
 ===
 title: SecuritySteve.cafe
 tags: 
 colorID: 0
-position: 998,-1821
+position: 1006,-1821
 ---
-oh no no no...not again...
+<<playAnimatorState SecuritySteve HangHead >>
+h no no no...not again...
 I am so sorry sir, this has been happening all week...
 I am afraid to say that your child has been abducted...
 //ENDING 3: CHILD WAS ABDUCTED
@@ -52,11 +53,14 @@ I am afraid to say that your child has been abducted...
 title: SecuritySteve.checkin
 tags: 
 colorID: 0
-position: 988,-1565
+position: 992,-1574
 ---
+<<playAnimatorState SecuritySteve AskForPass >>
+
 <<hasBoardingPass SecuritySteve>>
 << if $RetVal is true>> 
 //If has boarding pass
+    <<playAnimatorState SecuritySteve Thumbsup >>
     No problem at all Sir,
     your boarding pass looks good to me,
     please ensure you have no prohibited items in your hand luggage and enjoy your flight!
@@ -66,6 +70,7 @@ position: 988,-1565
 
 <<else>>
 //If no boarding pass
+    <<playAnimatorState SecuritySteve ShakeHead >>
     Sorry Sir, you need to have your boarding pass to proceed through the gate.
     <<set $securityRepeat to 1>>
     <<set $securityRepeatAns to "checkin">>
@@ -81,6 +86,7 @@ tags:
 colorID: 0
 position: 336,-2051
 ---
+<<playAnimatorState SecuritySteve Salute >>
 No problem, take care.
 <<set $securityRepeatAns to 0>>
 <<set $securityRepeat to 0>>

@@ -4,18 +4,21 @@ colorID: 0
 position: 474,-2089
 ---
 <<if visited("CheckInCarly.start") is false>>
+    <<playAnimatorState CheckInCarly Happy >>
     A warm welcome from SimplyFlight!
 <<else>>
     Hello again,
 << endif>> 
 
 <<if visited("Receptionist.lostchild") is true>>
+    <<playAnimatorState CheckInCarly Surprised >>
     Did you hear about that lost child?...
     You have to really feel sorry for the parents, anything can happen in an airport!
 << endif>> 
 
 
 << if visited("CheckInCarly.checkedin") is true >> 
+    <<playAnimatorState CheckInCarly Thank >>
     Thats all sir, just make your way to security and enjoy your flight
 <<else>>
     If you could pass over your documents, I will get your boarding pass sorted.
@@ -34,6 +37,7 @@ colorID: 0
 position: 768,-1943
 ---
 That's perfect!
+<<playAnimatorState CheckInCarly GivePass >>
 Here is your boarding pass, make sure to keep that somewhere safe!
 please make your way over to the security area to depart.
 Have a great trip!
@@ -43,6 +47,6 @@ tags:
 colorID: 0
 position: 762,-2218
 ---
-No problem Sir!
-Come and see me when you are ready.
+<<playAnimatorState CheckInCarly Thank >>
+No problem Sir! Come and see me when you are ready.
 ===
