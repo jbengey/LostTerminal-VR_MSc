@@ -5,35 +5,33 @@ position: 1202,-1696
 ---
 << if visited("Receptionist.start") is false>>
     <<playAnimatorState Receptionist Wave >>
-    Good afternoon sir, How can I help you today?
+    <<playCharacterDialog Receptionist 06339df>> Good afternoon sir, How can I help you today? #line:06339df
 << else>>
     <<if $receptionistRepeat is 1>>
-        Is there anything else I can help you with?
+        <<playCharacterDialog Receptionist 0fc0d19>> Is there anything else I can help you with? #line:0fc0d19
     <<else>>
         <<playAnimatorState Receptionist Wave >>
-        Hello again, was there something you forgot to ask?
+        <<playCharacterDialog Receptionist 07f1a1f>> Hello again, was there something you forgot to ask? #line:07f1a1f
     << endif>> 
 
 << endif>> 
 
 
 << if visited("Receptionist.lostchild") is false>> 
-    [[ I have lost my child, please help me!|Receptionist.lostchild]]
+    [[ I have lost my child, please help me!|Receptionist.lostchild]] #line:046e815
 <<elseif $receptionistRepeatAns is not "securitydesc">> 
-    [[ Where can I find the security guard?|Receptionist.securitydesc]]
+    [[ Where can I find the security guard?|Receptionist.securitydesc]] #line:037ac52
 <<endif>>
 
 <<if $receptionistRepeatAns is not "boardingpass">>
-    [[ Where can I get my boarding pass from? |Receptionist.boardingpass]]
+    [[ Where can I get my boarding pass from? |Receptionist.boardingpass]] #line:077b25a
 <<endif>>
 
 << if $receptionistRepeatAns is not "flighttime">> 
-    [[ What time is my flight leaving?|Receptionist.flighttime]]
+    [[ What time is my flight leaving?|Receptionist.flighttime]] #line:0781fc0
 <<endif>> 
 
-[[ Nothing, but thank you for asking|Receptionist.end]]
-
-//Logic doesnt work correctly
+[[ Nothing, but thank you for asking|Receptionist.end]] #line:016f903
 ===
 title: Receptionist.lostchild
 tags: 
@@ -42,14 +40,14 @@ position: 1523,-1890
 ---
 <<playAnimatorState Receptionist Surprised >>
 
-Oh dear... I can understand your concern, but please do not worry.
-I will make a quick announcement to alert members of staff...
+Oh dear... I can understand your concern, but please do not worry. #line:0af3159
+I will make a quick announcement to alert members of staff... #line:0681614
 <<playAnimatorState Receptionist Button >>
 //Play announcement sound
 <<wait 4>>
 
 
-In the meantime why don't you ask the security guard if he has noticed anything?
+In the meantime why don't you ask the security guard if he has noticed anything? #line:06975a7
 
 <<set $receptionistRepeat to 1>>
 [[Receptionist.start]]
@@ -60,7 +58,7 @@ colorID: 0
 position: 1529,-1624
 ---
 <<playAnimatorState Receptionist Point >>
-You can collect your boarding pass at one of the check-in desks, These are bright orange and are just over there...
+You can collect your boarding pass at one of the check-in desks, These are bright orange and are just over there... #line:0c0c70c
 //points to desks
 
 <<set $receptionistRepeat to 1>>
@@ -72,7 +70,7 @@ tags:
 colorID: 0
 position: 1527,-1365
 ---
-Your flight departs in 20 minutes time, so please drop off your bags and make your way to the gate.
+Your flight departs in 20 minutes time, so please drop off your bags and make your way to the gate. #line:0af46b1
 <<set $receptionistRepeat to 1>>
 <<set $receptionistRepeatAns to "flighttime">>
 [[Receptionist.start]]
@@ -84,7 +82,7 @@ position: 938,-1704
 ---
 <<playAnimatorState Receptionist Thank >>
 
-No problem, have a great flight!
+No problem, have a great flight! #line:0caf5b5
 <<set $receptionistRepeat to 0>>
 <<set $receptionistRepeatAns to 0>>
 ===
@@ -93,8 +91,8 @@ tags:
 colorID: 0
 position: 1519,-2135
 ---
-The security guard can be found next to the security area,
-He will be wearing a black outfit, so should be easy to spot!
+The security guard can be found next to the security area, #line:0abf3d4
+He will be wearing a black outfit, so should be easy to spot! #line:077937a
 
 <<set $receptionistRepeat to 1>>
 <<set $receptionistRepeatAns to "securitydesc">>

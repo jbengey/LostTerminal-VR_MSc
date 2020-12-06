@@ -13,7 +13,7 @@ public class DialogController : MonoBehaviour
     public YarnProgram scriptToLoad;
     public DialogueRunner dialogueRunner; //refernce to the dialogue control
     public GameObject dialogueCanavas; //refernce to the canvas
-    Vector3 PostionSpeachBubble = new Vector3(0f, 0.7f, -0.4f);
+    Vector3 PostionSpeachBubble = new Vector3(0f, 0.7f, 0.01f);
     public GameObject player,emptyDialogueHolder,dialogueName; //reference to the player and to an empty game object
     public MultiAimConstraint headAimConstraint;
 
@@ -102,7 +102,9 @@ public class DialogController : MonoBehaviour
         if (dialogueRunner.IsDialogueRunning & dialogueCanavas.activeInHierarchy)
         {
             //Rotate the canvas towards the player
-            dialogueCanavas.transform.rotation =  player.transform.rotation;
+            //dialogueCanavas.transform.rotation =  player.transform.rotation;
+            Vector3 playerlock = new Vector3 (player.transform.position.x, dialogueCanavas.transform.position.y, player.transform.position.z);
+            dialogueCanavas.transform.LookAt(playerlock);
 
 
         }

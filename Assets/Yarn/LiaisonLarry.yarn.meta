@@ -21,17 +21,19 @@ ScriptedImporter:
   - LiaisonLarry-LiaisonLarry.childdesc-8
   - LiaisonLarry-LiaisonLarry.childdesc-9
   - LiaisonLarry-LiaisonLarry.end-10
-  - LiaisonLarry-LiaisonLarry.end-11
+  - LiaisonLarry-LiaisonLarry.wrongdesc-11
   - LiaisonLarry-LiaisonLarry.wrongdesc-12
   - LiaisonLarry-LiaisonLarry.wrongdesc-13
   - LiaisonLarry-LiaisonLarry.wrongdesc-14
-  - LiaisonLarry-LiaisonLarry.wrongdesc-15
-  - LiaisonLarry-LiaisonLarry.correctdesc-16
+  - LiaisonLarry-LiaisonLarry.correctdesc-15
+  - LiaisonLarry-LiaisonLarry.docs-16
   - LiaisonLarry-LiaisonLarry.docs-17
-  - LiaisonLarry-LiaisonLarry.endchild-18
+  - LiaisonLarry-LiaisonLarry.docs-18
   - LiaisonLarry-LiaisonLarry.endchild-19
+  - LiaisonLarry-LiaisonLarry.endchild-20
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: a909e138911cfde498941435356d1505,
+    type: 3}
   localizations: []
