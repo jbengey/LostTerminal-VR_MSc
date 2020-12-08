@@ -13,7 +13,7 @@ public class DialogController : MonoBehaviour
     public YarnProgram scriptToLoad;
     public DialogueRunner dialogueRunner; //refernce to the dialogue control
     public GameObject dialogueCanavas; //refernce to the canvas
-    Vector3 PostionSpeachBubble = new Vector3(0f, 0.7f, 0.01f);
+    Vector3 PostionSpeachBubble = new Vector3(0f, 0.9f, 0.01f);
     public GameObject player,emptyDialogueHolder,dialogueName; //reference to the player and to an empty game object
     public MultiAimConstraint headAimConstraint;
 
