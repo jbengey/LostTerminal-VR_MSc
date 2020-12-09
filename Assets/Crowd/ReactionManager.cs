@@ -11,6 +11,7 @@ public class ReactionManager : MonoBehaviour
     public GameObject player;
     public Animator animationController;
     public NavigationController navController;
+    public AudioSource shoveSound;
 
 
     //Make the NPC face towards an NPC or the player when entering the collider sphere
@@ -102,23 +103,27 @@ public class ReactionManager : MonoBehaviour
         {
             if (animationController != null)
             {
+                
+
                 if (pos.x < 0.3 & pos.z < 0.8)
                 {
                     Debug.Log("Shoved Left");
                     animationController.SetBool("isShovedLeft", true);
+                    shoveSound.Play();
                 }
                 else if (pos.x > 0.3 & pos.z < 0.8)
                 {
                     Debug.Log("Shoved Right");
                     animationController.SetBool("isShovedRight", true);
+                    shoveSound.Play();
                 }
                 else if (pos.z >= 0.8)
                 {
                     Debug.Log("Shoved Font");
                     animationController.SetBool("isShovedFront", true);
+                    shoveSound.Play();
                 }
 
-                //navController.Idle(); //Set new nav agent target
             }
         }
         else
@@ -131,6 +136,9 @@ public class ReactionManager : MonoBehaviour
             }
         }
     }
+
+
+
 
 
 

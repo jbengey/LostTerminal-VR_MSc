@@ -57,8 +57,7 @@ position: 992,-1574
 ---
 <<playAnimatorState SecuritySteve AskForPass >>
 
-<<hasBoardingPass SecuritySteve>>
-<< if $RetVal is true>> 
+<< if visited("CheckInCarly.checkedin") is true>> 
 //If has boarding pass
     <<playAnimatorState SecuritySteve Thumbsup >>
     No problem at all Sir,

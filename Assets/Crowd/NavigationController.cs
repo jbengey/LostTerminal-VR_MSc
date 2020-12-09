@@ -9,6 +9,7 @@ public class NavigationController : MonoBehaviour
     public NavMeshAgent navMeshAgent;
     public Animator animator;
 
+
     public float turnSmoothing = 15f;           // The amount of smoothing applied to the player's turning using spherical interpolation.
     public float speedDampTime = 0.1f;          // The approximate amount of time it takes for the speed parameter to reach its value upon being set.
     public float slowingSpeed = 0.175f;         // The speed the player moves as it reaches close to it's destination.
@@ -23,7 +24,8 @@ public class NavigationController : MonoBehaviour
     public float minWanderDistance;
     public float maxWanderDistance;
 
-
+    public GameObject phone;
+    public AudioSource phoneCallSound;
 
 
     public enum State
@@ -104,20 +106,28 @@ public class NavigationController : MonoBehaviour
         }
         else
         {
-            //choose random wander distance between range
-            float wanderDistance = Random.Range(minWanderDistance, maxWanderDistance);
-
-            Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * wanderDistance;
-
-            randomDirection += transform.position;
-
-            NavMeshHit navHit;
-
-            NavMesh.SamplePosition(randomDirection, out navHit, wanderDistance, NavMesh.AllAreas);
-
-            targetPosition = navHit.position;
-
-            navMeshAgent.SetDestination(targetPosition);
+            //Random probability of taking phone call
+            if (Random.Range(0, 100) < 15)
+            {
+                //Activate phone gameobject in hand
+                StartCoroutine(PhoneControl());
+                //Set boolean to take phone call
+                animator.SetTrigger("isOnPhone");
+                //Play phone call sound
+                phoneCallSound.Play();
+            
+            }
+            else
+            {
+                //choose random wander distance between range
+                float wanderDistance = Random.Range(minWanderDistance, maxWanderDistance);
+                Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * wanderDistance;
+                randomDirection += transform.position;
+                NavMeshHit navHit;
+                NavMesh.SamplePosition(randomDirection, out navHit, wanderDistance, NavMesh.AllAreas);
+                targetPosition = navHit.position;
+                navMeshAgent.SetDestination(targetPosition);
+            }
         }
 
     }
@@ -181,7 +191,13 @@ public class NavigationController : MonoBehaviour
 
 
 
-
+    //Corotine used to enable and disable the phone object - timed with the length of animation
+    private IEnumerator PhoneControl()
+    {
+        phone.SetActive(true);
+        yield return new WaitForSeconds(30); //wait 1 second before continuing
+        phone.SetActive(false);
+    }
 
 
 

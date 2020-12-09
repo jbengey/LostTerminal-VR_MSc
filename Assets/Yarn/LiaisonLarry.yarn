@@ -72,9 +72,8 @@ position: 327,-1616
 <<playAnimatorState LiaisonLarry AskForPass >>
 Let me just take a look at these...
 <<wait 2>> 
-<<hasBoardingPass LiaisonLarry>>
 
-<< if $RetVal is true>> 
+<< if visited("CheckInCarly.checkedin") is true>> 
 //if have board pass
     <<playAnimatorState LiaisonLarry Thumbsup >>
     That looks good to me!

@@ -24,8 +24,6 @@ public class NodeVisitedTracker : MonoBehaviour
             var nodeName = parameters[0];
             return _visitedNodes.Contains(nodeName.AsString);
         });
-
-        dialogueRunner.variableStorage.SetValue("$RetVal", 0); //Create a temp variable in storage to allow the passing of variables back to yarn
     }
 
     // Called by the Dialogue Runner to notify us that a node finished
