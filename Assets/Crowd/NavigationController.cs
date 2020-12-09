@@ -35,7 +35,6 @@ public class NavigationController : MonoBehaviour
     }
     public State state;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -106,8 +105,8 @@ public class NavigationController : MonoBehaviour
         }
         else
         {
-            //Random probability of taking phone call
-            if (Random.Range(0, 100) < 15)
+            //Random probability of taking phone call (Has to be small probability as the idle function is called multiple times in update when player waits around)
+            if (Random.Range(0, 100) < 3)
             {
                 //Activate phone gameobject in hand
                 StartCoroutine(PhoneControl());
@@ -115,7 +114,10 @@ public class NavigationController : MonoBehaviour
                 animator.SetTrigger("isOnPhone");
                 //Play phone call sound
                 phoneCallSound.Play();
-            
+            }
+            else if (Random.Range(0, 100) < 3) //Random probability of being sad
+            {
+                animator.SetTrigger("isSad");
             }
             else
             {
@@ -195,7 +197,7 @@ public class NavigationController : MonoBehaviour
     private IEnumerator PhoneControl()
     {
         phone.SetActive(true);
-        yield return new WaitForSeconds(30); //wait 1 second before continuing
+        yield return new WaitForSeconds(41); //wait 1 second before continuing
         phone.SetActive(false);
     }
 
