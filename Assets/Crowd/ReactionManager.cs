@@ -99,7 +99,7 @@ public class ReactionManager : MonoBehaviour
     private void ShoveDetection(Vector3 pos)
     {
         
-        if (Vector3.Distance(transform.position, player.transform.position) < 2)
+        if (Vector3.Distance(transform.position, player.transform.position) < 1.5f)
         {
             if (animationController != null)
             {

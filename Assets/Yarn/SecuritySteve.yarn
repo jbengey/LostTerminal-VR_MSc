@@ -1,7 +1,7 @@
 title: SecuritySteve.start
 tags: 
 colorID: 0
-position: 624,-2053
+position: 624,-2054
 ---
 <<if visited("SecuritySteve.start") is false>>
     <<playCharacterDialog SecuritySteve secruityGreeting>>  Alright treacle, What can I do for you?
@@ -15,7 +15,7 @@ position: 624,-2053
 
 <<if visited("Receptionist.lostchild") is true>>
     [[ I have lost my child, I was directed to you for help|SecuritySteve.liaison]]
-<< elseif $securityRepeatAns is not "flight" >> 
+<< elseif $securityRepeatAns is not "flight" and visited("CheckInCarly.checkedin") is false >> 
     [[ I would like to board my flight|SecuritySteve.flight]]
 <<endif>>
 
@@ -49,11 +49,13 @@ h no no no...not again...
 I am so sorry sir, this has been happening all week...
 I am afraid to say that your child has been abducted...
 //ENDING 3: CHILD WAS ABDUCTED
+<< wait 2>>  
+<< gameOver SecuritySteve>>
 ===
 title: SecuritySteve.checkin
 tags: 
 colorID: 0
-position: 992,-1574
+position: 991,-1574
 ---
 <<playAnimatorState SecuritySteve AskForPass >>
 
@@ -65,6 +67,8 @@ position: 992,-1574
     please ensure you have no prohibited items in your hand luggage and enjoy your flight!
     << set $RetVal to 0 >> 
 //ENDING 2: BOARD FLIGHT
+<< wait 2>>  
+<< gameOver SecuritySteve>> 
 
 
 <<else>>

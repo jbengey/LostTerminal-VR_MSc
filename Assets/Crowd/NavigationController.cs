@@ -68,6 +68,7 @@ public class NavigationController : MonoBehaviour
 
 
 
+
         navMeshAgent.isStopped = false;
 
         // If the nav mesh agent is currently waiting for a path, do nothing.
@@ -197,7 +198,7 @@ public class NavigationController : MonoBehaviour
     private IEnumerator PhoneControl()
     {
         phone.SetActive(true);
-        yield return new WaitForSeconds(48); //wait 1 second before continuing
+        yield return new WaitForSeconds(60);
         phone.SetActive(false);
     }
 
