@@ -5,9 +5,9 @@ position: 474,-2089
 ---
 <<if visited("CheckInCarly.start") is false>>
     <<playAnimatorState CheckInCarly Happy >>
-    A warm welcome from SimplyFlight!
+    <<playCharacterDialog CheckInCarly CheckinWelcome>> A warm welcome from SimplyFlight!
 <<else>>
-    Hello again,
+    <<playCharacterDialog CheckInCarly CheckinHello>> Hello again,
 << endif>> 
 
 <<if visited("Receptionist.lostchild") is true>>

@@ -44,6 +44,7 @@ Oh dear... I can understand your concern, but please do not worry. #line:0af3159
 I will make a quick announcement to alert members of staff... #line:0681614
 <<playAnimatorState Receptionist Button >>
 //Play announcement sound
+<<playCharacterDialog Receptionist announcement>>
 <<wait 4>>
 
 

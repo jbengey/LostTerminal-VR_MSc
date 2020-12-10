@@ -4,11 +4,11 @@ colorID: 0
 position: 326,-1951
 ---
 << if visited("LiaisonLarry.start") is false>>
-    Hello there! I'm Larry, how can I help you Sir?
+    <<playCharacterDialog LiaisonLarry larryGreet>> Hello there! I'm Larry, how can I help you Sir?
 <<elseif $LiaisonRepeat is 1>>
-    Now, is there anyhing else you need from me?
+    <<playCharacterDialog LiaisonLarry larryRepeat>> Now, is there anyhing else you need from me?
 << else>>
-    Ah you're back, can I help?
+    <<playCharacterDialog LiaisonLarry larrySecondgreet>> Ah you're back, can I help?
 << endif>> 
 
 
@@ -38,7 +38,7 @@ colorID: 0
 position: -21,-1955
 ---
 <<playAnimatorState LiaisonLarry Wave >>
-Have a fantastic day!
+<<playCharacterDialog LiaisonLarry larryGoodbye>> Have a fantastic day!
 <<set $LiaisonRepeat to 0>>
 <<set $LiaisonRepeatAns to 0>>
 << set $RetVal to 0 >>

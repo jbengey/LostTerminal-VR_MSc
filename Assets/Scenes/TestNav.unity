@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: d706e3c6c501bbd418412dde65cc3a23,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -597,7 +597,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5e36f7d4a681aa742b3099e0e6c4fc3b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.628
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1169,7 +1169,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6bfc799ea8a5687498a8cbad2ce1a868, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.457
+  m_Volume: 0.211
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -4,13 +4,13 @@ colorID: 0
 position: 92,-906
 ---
 <<if visited("CafeWorkerDave.start") is false>>
-    Hello there! Can I interest you in our specialty sandwhich Sir?
+    <<playCharacterDialog CafeWorkerDave cafeGreet>> Hello there! Can I interest you in our specialty sandwhich Sir?
 <<elseif visited("CafeWorkerDave.missingchild") is true>> 
-    I hope the security guard was able to help you Sir. How can I be of assistance?
+    <<playCharacterDialog CafeWorkerDave cafeSecurity>> I hope the security guard was able to help you Sir. How can I be of assistance?
 <<elseif $repeatCafe is 1>>
-    Was there anything else?
+    <<playCharacterDialog CafeWorkerDave cafeRepeat>> Was there anything else?
 <<else>>
-    Hi, did you forget something?
+    <<playCharacterDialog CafeWorkerDave cafeSecondGreet>> Hi, did you forget something?
 << endif>> 
 
 
@@ -57,7 +57,7 @@ colorID: 0
 position: -170,-891
 ---
 <<playAnimatorState CafeWorkerDave HandGesture >>
-Let me know if you change your mind about that sandwhich!
+<<playCharacterDialog CafeWorkerDave cafeGoodbye>> Let me know if you change your mind about that sandwhich!
 <<set $repeatAnsCafe to 0>>
 <<set $repeatCafe to 0>>
 ===

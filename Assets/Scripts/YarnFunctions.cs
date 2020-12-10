@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 using System;
+using UnityEngine.SceneManagement;
 
 public class YarnFunctions : MonoBehaviour
 {
@@ -35,6 +36,13 @@ public class YarnFunctions : MonoBehaviour
     }
 
 
+    //Command to allow yarn to end the game
+    [YarnCommand("gameOver")]
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
+
+    }
 
 
 }

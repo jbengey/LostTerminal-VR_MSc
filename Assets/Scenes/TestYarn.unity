@@ -2405,7 +2405,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1335587321}
-  - component: {fileID: 1335587322}
   - component: {fileID: 1335587323}
   m_Layer: 0
   m_Name: SecuritySteve
@@ -2431,20 +2430,6 @@ Transform:
   m_Father: {fileID: 2045870919}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1335587322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335587320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b8ba6760387a2f49b9084d5c8e85246, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boardingPass: {fileID: 502659222}
-  dialogueRunner: {fileID: 2750270513271888834}
 --- !u!114 &1335587323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2468,7 +2453,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1415172871}
-  - component: {fileID: 1415172872}
   - component: {fileID: 1415172873}
   m_Layer: 0
   m_Name: LiaisonLarry
@@ -2494,20 +2478,6 @@ Transform:
   m_Father: {fileID: 2045870919}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1415172872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415172870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b8ba6760387a2f49b9084d5c8e85246, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boardingPass: {fileID: 502659222}
-  dialogueRunner: {fileID: 2750270513271888834}
 --- !u!114 &1415172873
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,11 +4,11 @@ colorID: 0
 position: 624,-2053
 ---
 <<if visited("SecuritySteve.start") is false>>
-    Alright treacle, What can I do for you?
+    <<playCharacterDialog SecuritySteve secruityGreeting>>  Alright treacle, What can I do for you?
 << elseif $securityRepeat is 1>>
-    Is there anything else I can do for you?
+    <<playCharacterDialog SecuritySteve securityFollowup>> Is there anything else I can do for you?
 << else >>
-    Oh Hi, how can I help?
+    <<playCharacterDialog SecuritySteve securitySecondgreet>> Oh Hi, how can I help?
 <<endif>>
 
 
@@ -86,7 +86,7 @@ colorID: 0
 position: 336,-2051
 ---
 <<playAnimatorState SecuritySteve Salute >>
-No problem, take care.
+<<playCharacterDialog SecuritySteve securityGoodbye>>  No problem, take care.
 <<set $securityRepeatAns to 0>>
 <<set $securityRepeat to 0>>
 ===
