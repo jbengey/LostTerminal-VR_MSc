@@ -107,19 +107,19 @@ public class ReactionManager : MonoBehaviour
 
                 if (pos.x < 0.3 & pos.z < 0.8)
                 {
-                    Debug.Log("Shoved Left");
+                    //Debug.Log("Shoved Left");
                     animationController.SetBool("isShovedLeft", true);
                     shoveSound.Play();
                 }
                 else if (pos.x > 0.3 & pos.z < 0.8)
                 {
-                    Debug.Log("Shoved Right");
+                    //Debug.Log("Shoved Right");
                     animationController.SetBool("isShovedRight", true);
                     shoveSound.Play();
                 }
                 else if (pos.z >= 0.8)
                 {
-                    Debug.Log("Shoved Font");
+                    //Debug.Log("Shoved Font");
                     animationController.SetBool("isShovedFront", true);
                     shoveSound.Play();
                 }

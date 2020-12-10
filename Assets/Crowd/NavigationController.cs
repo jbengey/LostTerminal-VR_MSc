@@ -197,7 +197,7 @@ public class NavigationController : MonoBehaviour
     private IEnumerator PhoneControl()
     {
         phone.SetActive(true);
-        yield return new WaitForSeconds(41); //wait 1 second before continuing
+        yield return new WaitForSeconds(48); //wait 1 second before continuing
         phone.SetActive(false);
     }
 
